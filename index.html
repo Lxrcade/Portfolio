@@ -27,13 +27,13 @@
   <meta name="framer-search-index-fallback"
     content="https://framerusercontent.com/sites/6ra3FgkknhnFIXWT0slJwZ/searchIndex-OLfaTfKahMe3.json">
 
-  <link href="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png" rel="icon"
+  <link href="favicon.ico" rel="icon"
     media="(prefers-color-scheme: light)">
 
-  <link href="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png" rel="icon"
+  <link href="favicon.ico" rel="icon"
     media="(prefers-color-scheme: dark)">
 
-  <link rel="apple-touch-icon" href="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png">
+  <link rel="apple-touch-icon" href="favicon.ico">
 
   <!-- Open Graph -->
 
@@ -44,7 +44,7 @@
   <meta property="og:description"
     content="I design and build full-stack web applications using Laravel, Livewire, and Tailwind CSS.">
 
-  <meta property="og:image" content="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png">
+  <meta property="og:image" content="assets/images/logo.png">
 
   <!-- X -->
 
@@ -55,7 +55,7 @@
   <meta name="twitter:description"
     content="I design and build full-stack web applications using Laravel, Livewire, and Tailwind CSS.">
 
-  <meta name="twitter:image" content="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png">
+  <meta name="twitter:image" content="assets/images/logo.png">
 
 
 
@@ -5418,95 +5418,258 @@
 
 
 
-  <style id="portfolio-safe-enhancements">
-    /* 
-     ELEGANT PORTFOLIO ENHANCEMENTS
-     - Displays the sleek crimson ambient hero backdrop seamlessly
-     - Ensures hero title, bio, and CTA are fully crisp, visible, and animated
-     - Reveals section titles and badges cleanly
-     - Keeps card layout perfectly aligned and responsive
-     - Smooth crossfade for stacked certification panels
-  */
-    .framer-ci9f92 {
-      opacity: 1 !important;
-      transform: none !important;
-    }
+  <style id="portfolio-fluid-animations">
+  /* ============================================================
+     ORIGINAL FRAMER ANIMATIONS & LUXURY UI STYLING
+     ============================================================ */
 
-    .framer-ci9f92 img {
-      opacity: 1 !important;
-      visibility: visible !important;
-      object-fit: cover !important;
-    }
+  /* 0. Navbar Styling & Links */
+  nav[name="Navbar"] {
+    background-color: rgba(16, 16, 16, 0.75) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+  }
+  nav[name="Navbar"] .framer-1twa9h {
+    display: none !important;
+  }
+  nav[name="Navbar"] .framer-y607v8,
+  nav[name="Navbar"] .framer-1damm8f {
+    white-space: normal !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+  nav[name="Navbar"] p.framer-text,
+  nav[name="Navbar"] .framer-y607v8 p,
+  nav[name="Navbar"] .framer-1f3wy5u p,
+  nav[name="Navbar"] [data-framer-name="Main link"] p {
+    color: #ffffff !important;
+    --framer-text-color: #ffffff !important;
+    opacity: 1 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    transition: color 0.25s ease, transform 0.25s ease !important;
+  }
+  nav[name="Navbar"] a:hover p.framer-text,
+  nav[name="Navbar"] a:hover .framer-y607v8 p {
+    color: #d946ef !important;
+    --framer-text-color: #d946ef !important;
+  }
 
-    /* Reveal hero content gracefully without blur */
-    .framer-1cph93j {
-      opacity: 1 !important;
-      transform: none !important;
+  /* 1. Hero Background Cinematic Ease */
+  @keyframes heroBgReveal {
+    0% {
+      opacity: 0.85;
+      transform: scale(1.08);
     }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 
-    .framer-1cph93j span {
-      opacity: 1 !important;
-      filter: none !important;
-      transform: none !important;
-    }
+  .framer-ci9f92 {
+    opacity: 1 !important;
+    animation: heroBgReveal 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  }
+  .framer-ci9f92 img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: cover !important;
+  }
 
-    .framer-1wengj2,
-    .framer-1tmx30z-container {
-      opacity: 1 !important;
-      transform: none !important;
+  /* 2. Hero Words Staggered Reveal */
+  @keyframes heroWordRise {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+      filter: blur(10px);
     }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0px);
+    }
+  }
 
-    /* Reveal section titles and subtitles cleanly */
-    #services-home [style*="opacity:0"],
-    #services-home [style*="opacity: 0"],
-    #works [style*="opacity:0"],
-    #works [style*="opacity: 0"],
-    #about-us [style*="opacity:0"],
-    #about-us [style*="opacity: 0"],
-    .framer-4lzc07,
-    .framer-ar9s84 {
-      opacity: 1 !important;
-      transform: none !important;
-      filter: none !important;
-    }
+  .framer-1cph93j {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 
-    /* Smooth transition between certification panels */
-    .framer-vi4k4l,
-    .framer-1v25ke1,
-    .framer-u9ztsl {
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+  .framer-hero-word {
+    display: inline-block !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    filter: none !important;
+    will-change: transform, opacity, filter;
+    animation: heroWordRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  .framer-hero-word.word-1 { animation-delay: 0.08s; }
+  .framer-hero-word.word-2 { animation-delay: 0.22s; }
+  .framer-hero-word.word-3 { animation-delay: 0.36s; }
 
-    /* Ensure card text is crisp, legible, and never collides */
-    #services-home p.framer-text {
-      font-size: 13.5px !important;
-      line-height: 1.5 !important;
-      letter-spacing: 0.02em !important;
-      word-break: normal !important;
-    }
+  .framer-15bggax h1,
+  .framer-15bggax .framer-text {
+    color: #ffffff !important;
+    --framer-text-color: #ffffff !important;
+  }
 
-    /* Smooth momentum scrolling */
-    html.lenis,
-    html.lenis body {
-      height: auto;
+  /* 3. Hero Subtitle & CTA Spring Pop */
+  @keyframes heroFadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(22px);
     }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-    .lenis.lenis-smooth {
-      scroll-behavior: auto !important;
+  @keyframes heroBtnPop {
+    0% {
+      opacity: 0;
+      transform: translateY(16px) scale(0.92);
     }
+    70% {
+      transform: translateY(-2px) scale(1.03);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 
-    .lenis.lenis-smooth [data-lenis-prevent] {
-      overscroll-behavior: contain;
-    }
+  .framer-1wengj2 {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: heroFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s backwards;
+  }
+  .framer-1wengj2 span {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 
-    .lenis.lenis-stopped {
-      overflow: hidden;
-    }
+  .framer-1tmx30z-container {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: heroBtnPop 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.6s backwards;
+  }
 
-    .lenis.lenis-scrolling iframe {
-      pointer-events: none;
-    }
-  </style>
+  /* 4. About Me Kinetic Word Highlight */
+  .kinetic-word {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.22);
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+  }
+  .kinetic-word.is-lit {
+    color: #ffffff;
+    text-shadow: 0 0 16px rgba(255, 255, 255, 0.35);
+  }
+
+  /* 5. Scroll-Reveal Sections & Headers */
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal-on-scroll.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .slide-in-left.is-visible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+
+  /* 6. Skills & Tech Stack Cards Interactive Hover */
+  #services-home .framer-8ikryx > div,
+  #services-home .framer-1lnuqe1 > div {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    cursor: default;
+  }
+  #services-home .framer-8ikryx > div:hover,
+  #services-home .framer-1lnuqe1 > div:hover {
+    transform: translateY(-4px);
+  }
+
+  #services-home p.framer-text {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.02em !important;
+    word-break: normal !important;
+  }
+
+  /* 7. Certifications Pinned Crossfade */
+  #certifications .framer-vi4k4l,
+  #certifications .framer-1v25ke1,
+  #certifications .framer-u9ztsl {
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* 8. Works Project Cards Zoom on Hover */
+  #works .framer-tsj3mx,
+  #works .framer-ar9s84,
+  #works [data-framer-name="Title"],
+  #works [data-framer-name="Subtitle"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  #works h3.framer-text {
+    color: #ffffff !important;
+    --framer-text-color: #ffffff !important;
+  }
+  #works .framer-kl40wp {
+    background-color: #d946ef !important;
+  }
+  #works .framer-1m52c7f-container,
+  #works .framer-iwix8c-container {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+  }
+  #works .framer-1m52c7f-container:hover,
+  #works .framer-iwix8c-container:hover {
+    transform: translateY(-6px) !important;
+  }
+  #works .framer-1edwrcp,
+  #works .framer-7j25g0 {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  #works img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  #works a:hover img {
+    transform: scale(1.04) !important;
+  }
+
+  /* Lenis smooth scrolling rules */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+</style>
 
   <style>
 html, body { background: #0a0a0a !important; color: #e8e8e8 !important; }
@@ -5556,7 +5719,7 @@ a { color: #fb460d !important; }
                     <div
                       style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0"
                       data-framer-background-image-wrapper="true"><img decoding="async" width="679" height="679"
-                        src="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png?width=679&amp;height=679"
+                        src="assets/images/logo.png"
                         alt="Brand logo
 " style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:contain">
                     </div>
@@ -5570,19 +5733,14 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">
-                              HOME</p>
-                          </div>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">HOME</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">
-                              HOME</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">HOME</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5595,19 +5753,14 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">
-                              WORKS</p>
-                          </div>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">WORKS</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">
-                              WORKS</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">WORKS</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5620,19 +5773,14 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">
-                              Skills &amp; Tech Stack</p>
-                          </div>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">Skills &amp; Tech Stack</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">
-                              Skills &amp; Tech Stack</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">Skills &amp; Tech Stack</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5645,19 +5793,14 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">
-                              CONTACT</p>
-                          </div>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">CONTACT</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">
-                              CONTACT</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">CONTACT</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5686,17 +5829,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">PROJECTS</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">PROJECTS</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              PROJECTS</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">PROJECTS</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5710,17 +5849,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">WORKS</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">WORKS</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              WORKS</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">WORKS</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5734,17 +5869,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">SKILLS &amp; TECH STACK</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">SKILLS &amp; TECH STACK</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              SKILLS &amp; TECH STACK</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">SKILLS &amp; TECH STACK</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5758,17 +5889,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">CONTACT</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">CONTACT</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              CONTACT</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">CONTACT</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5794,7 +5921,7 @@ a { color: #fb460d !important; }
                     <div
                       style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0"
                       data-framer-background-image-wrapper="true"><img decoding="async" width="679" height="679"
-                        src="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png?width=679&amp;height=679"
+                        src="assets/images/logo.png"
                         alt="Brand logo
 " style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:contain">
                     </div>
@@ -5808,19 +5935,14 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">
-                              WORKS</p>
-                          </div>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">WORKS</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">
-                              WORKS</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">WORKS</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5833,19 +5955,14 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">
-                              Skills &amp; Tech Stack</p>
-                          </div>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">Skills &amp; Tech Stack</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">
-                              Skills &amp; Tech Stack</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">Skills &amp; Tech Stack</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5858,19 +5975,14 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--extracted-r6o4lv:var(--variable-reference-xKOLk_FDy-DnLkRyNSg);transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">
-                              CONTACT</p>
-                          </div>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-xKOLk_FDy-DnLkRyNSg))">CONTACT</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
+                            style="--extracted-r6o4lv:var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1wrkqr9" data-styles-preset="Y0WIQZQSw"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">
-                              CONTACT</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-74fce0a4-e1f6-4373-9215-78eb3ba84301, rgb(251, 70, 13)))">CONTACT</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5899,17 +6011,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">PROJECTS</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">PROJECTS</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              PROJECTS</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">PROJECTS</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5923,17 +6031,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">WORKS</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">WORKS</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              WORKS</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">WORKS</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5947,17 +6051,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">SKILLS &amp; TECH STACK</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">SKILLS &amp; TECH STACK</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              SKILLS &amp; TECH STACK</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">SKILLS &amp; TECH STACK</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -5971,17 +6071,13 @@ a { color: #fb460d !important; }
                         <div class="framer-1damm8f">
                           <div class="framer-y607v8" data-framer-name="Main link"
                             data-framer-component-type="RichTextContainer"
-                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
-                              dir="auto">CONTACT</p>
-                          </div>
+                            style="--framer-paragraph-spacing:0px;--variable-reference-xKOLk_FDy-DnLkRyNSg:var(--token-4b62672a-1254-4f4c-98ad-c16665e051d8, rgb(16, 16, 16));transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                              dir="auto">CONTACT</p></div>
                           <div class="framer-1twa9h" data-framer-name="Hover link"
                             data-framer-component-type="RichTextContainer"
-                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none">
-                            <p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
+                            style="--extracted-r6o4lv:var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0));--framer-paragraph-spacing:0px;transform:none"><p class="framer-text framer-styles-preset-1xkl6p0" data-styles-preset="Rom_kKt7c"
                               dir="auto"
-                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">
-                              CONTACT</p>
+                              style="--framer-text-color:var(--extracted-r6o4lv, var(--token-e341aa9b-dfd4-4313-b565-ce9228ae8097, rgb(0, 0, 0)))">CONTACT</p>
                           </div>
                         </div>
                       </a><!--/$--></div>
@@ -6007,7 +6103,7 @@ a { color: #fb460d !important; }
                     <div
                       style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0"
                       data-framer-background-image-wrapper="true"><img decoding="async" width="679" height="679"
-                        src="https://framerusercontent.com/images/VttPgFh2IOin8x65GZ1H2SfIgvo.png?width=679&amp;height=679"
+                        src="assets/images/logo.png"
                         alt="Brand logo
 " style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:contain">
                     </div>
@@ -6046,23 +6142,17 @@ a { color: #fb460d !important; }
               <div class="framer-15bggax" data-framer-name="Heading">
                 <div class="ssr-variant hidden-1kjv1dw hidden-1y0ib3c">
                   <div class="framer-20anps" data-framer-component-type="RichTextContainer" style="transform:none">
-                    <h1 class="framer-text framer-styles-preset-n8lgvo" data-styles-preset="jCHpZ1FME" dir="auto"><span
-                        style="display:inline-block;opacity:0.001;filter:blur(10px);transform:translateX(0px) translateY(150px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)">Jake</span>
-                      <span
-                        style="display:inline-block;opacity:0.001;filter:blur(10px);transform:translateX(0px) translateY(150px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)">Moises</span>
-                      <span
-                        style="display:inline-block;opacity:0.001;filter:blur(10px);transform:translateX(0px) translateY(150px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)">Morales</span>
+                    <h1 class="framer-text framer-styles-preset-n8lgvo" data-styles-preset="jCHpZ1FME" dir="auto"><span class="framer-hero-word word-1">Jake</span>
+                      <span class="framer-hero-word word-2">Moises</span>
+                      <span class="framer-hero-word word-3">Morales</span>
                     </h1>
                   </div>
                 </div>
                 <div class="ssr-variant hidden-72rtr7">
                   <div class="framer-20anps" data-framer-component-type="RichTextContainer" style="transform:none">
-                    <h1 class="framer-text framer-styles-preset-cmjlq8" data-styles-preset="xqrgCtBdK" dir="auto"><span
-                        style="display:inline-block;opacity:0.001;filter:blur(10px);transform:translateX(0px) translateY(150px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)">Jake</span>
-                      <span
-                        style="display:inline-block;opacity:0.001;filter:blur(10px);transform:translateX(0px) translateY(150px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)">Moises</span>
-                      <span
-                        style="display:inline-block;opacity:0.001;filter:blur(10px);transform:translateX(0px) translateY(150px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)">Morales</span>
+                    <h1 class="framer-text framer-styles-preset-cmjlq8" data-styles-preset="xqrgCtBdK" dir="auto"><span class="framer-hero-word word-1">Jake</span>
+                      <span class="framer-hero-word word-2">Moises</span>
+                      <span class="framer-hero-word word-3">Morales</span>
                     </h1>
                   </div>
                 </div>
@@ -7110,9 +7200,9 @@ a { color: #fb460d !important; }
                           data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1915"
                             height="1079"
                             sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                            srcset="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=512&amp;width=1915&amp;height=1079 512w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=1024&amp;width=1915&amp;height=1079 1024w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079 1915w"
-                            src="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079"
-                            alt="work 1"
+                            srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1915w"
+                            src="assets/images/smartband-dash.png"
+                            alt="SmartBand PWA Dashboard"
                             style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                         </div>
                       </div>
@@ -7126,9 +7216,9 @@ a { color: #fb460d !important; }
                           data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1921"
                             height="1083"
                             sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                            srcset="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=512&amp;width=1921&amp;height=1083 512w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=1024&amp;width=1921&amp;height=1083 1024w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083 1921w"
-                            src="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083"
-                            alt="work 2"
+                            srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1921w"
+                            src="assets/images/smartband-dash.png"
+                            alt="SmartBand PWA & IoT System"
                             style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                         </div>
                       </div>
@@ -7175,9 +7265,9 @@ a { color: #fb460d !important; }
                           data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1915"
                             height="1079"
                             sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                            srcset="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=512&amp;width=1915&amp;height=1079 512w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=1024&amp;width=1915&amp;height=1079 1024w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079 1915w"
-                            src="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079"
-                            alt="work 1"
+                            srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1915w"
+                            src="assets/images/smartband-dash.png"
+                            alt="SmartBand PWA Dashboard"
                             style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                         </div>
                       </div>
@@ -7191,9 +7281,9 @@ a { color: #fb460d !important; }
                           data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1921"
                             height="1083"
                             sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                            srcset="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=512&amp;width=1921&amp;height=1083 512w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=1024&amp;width=1921&amp;height=1083 1024w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083 1921w"
-                            src="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083"
-                            alt="work 2"
+                            srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1921w"
+                            src="assets/images/smartband-dash.png"
+                            alt="SmartBand PWA & IoT System"
                             style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                         </div>
                       </div>
@@ -7215,9 +7305,9 @@ a { color: #fb460d !important; }
                         data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1915"
                           height="1079"
                           sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                          srcset="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=512&amp;width=1915&amp;height=1079 512w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=1024&amp;width=1915&amp;height=1079 1024w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079 1915w"
-                          src="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079"
-                          alt="silhouette of a female figure on a red background"
+                          srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1915w"
+                          src="assets/images/smartband-dash.png"
+                          alt="SmartBand — Band 1870 PWA & Management System Dashboard"
                           style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                       </div>
                     </div>
@@ -7234,9 +7324,9 @@ a { color: #fb460d !important; }
                         data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1915"
                           height="1079"
                           sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                          srcset="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=512&amp;width=1915&amp;height=1079 512w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=1024&amp;width=1915&amp;height=1079 1024w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079 1915w"
-                          src="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079"
-                          alt="silhouette of a female figure on a red background"
+                          srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1915w"
+                          src="assets/images/smartband-dash.png"
+                          alt="SmartBand — Band 1870 PWA & Management System Dashboard"
                           style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                       </div>
                     </div>
@@ -7257,9 +7347,9 @@ a { color: #fb460d !important; }
                         data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1915"
                           height="1079"
                           sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                          srcset="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=512&amp;width=1915&amp;height=1079 512w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?scale-down-to=1024&amp;width=1915&amp;height=1079 1024w,https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079 1915w"
-                          src="https://framerusercontent.com/images/l78cKxbuLhqt7dsR0vdaCYkrc.png?width=1915&amp;height=1079"
-                          alt="silhouette of a female figure on a red background"
+                          srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1915w"
+                          src="assets/images/smartband-dash.png"
+                          alt="SmartBand — Band 1870 PWA & Management System Dashboard"
                           style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                       </div>
                     </div>
@@ -7275,9 +7365,9 @@ a { color: #fb460d !important; }
                         data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1921"
                           height="1083"
                           sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                          srcset="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=512&amp;width=1921&amp;height=1083 512w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=1024&amp;width=1921&amp;height=1083 1024w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083 1921w"
-                          src="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083"
-                          alt="table lamp on a working desk"
+                          srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1921w"
+                          src="assets/images/smartband-dash.png"
+                          alt="IoT Telemetry & SmartBand Hardware Integration"
                           style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                       </div>
                     </div>
@@ -7294,9 +7384,9 @@ a { color: #fb460d !important; }
                         data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1921"
                           height="1083"
                           sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                          srcset="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=512&amp;width=1921&amp;height=1083 512w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=1024&amp;width=1921&amp;height=1083 1024w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083 1921w"
-                          src="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083"
-                          alt="table lamp on a working desk"
+                          srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1921w"
+                          src="assets/images/smartband-dash.png"
+                          alt="IoT Telemetry & SmartBand Hardware Integration"
                           style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                       </div>
                     </div>
@@ -7317,9 +7407,9 @@ a { color: #fb460d !important; }
                         data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" width="1921"
                           height="1083"
                           sizes="(min-width: 1440px) max(101px, max(min(100vw - 40px, 1440px) - 407px, 1px)), (max-width: 809.98px) max(101px, max(min(100vw - 40px, 1440px), 1px)), (min-width: 810px) and (max-width: 1439.98px) max(77px, max(min(100vw - 40px, 1440px) - 407px, 1px))"
-                          srcset="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=512&amp;width=1921&amp;height=1083 512w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?scale-down-to=1024&amp;width=1921&amp;height=1083 1024w,https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083 1921w"
-                          src="https://framerusercontent.com/images/UeXcHnCRjr3xqdoI7CV8YCw2oQ.png?width=1921&amp;height=1083"
-                          alt="table lamp on a working desk"
+                          srcset="assets/images/smartband-dash.png 512w,assets/images/smartband-dash.png 1024w,assets/images/smartband-dash.png 1921w"
+                          src="assets/images/smartband-dash.png"
+                          alt="IoT Telemetry & SmartBand Hardware Integration"
                           style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
                       </div>
                     </div>
@@ -7778,7 +7868,7 @@ a { color: #fb460d !important; }
   <!-- React hydration disabled to preserve user edits -->
   <!-- <script type="module" async data-framer-bundle="main" fetchPriority="low" src="https://framerusercontent.com/sites/6ra3FgkknhnFIXWT0slJwZ/script_main.Fxj_4WUG.mjs"></script> -->
   <script type="framer/handover"
-    id="__framer__handoverData">[{"0":1,"1":2},["Map"],["Map",3,4,5,6],"getSlugByRecordId|hxDMaj6P5|default|K6uCiHvVB","personal-webiste","getSlugByRecordId|hxDMaj6P5|default|olbBzt4rZ","benchz-gym-system"]</script>
+    id="__framer__handoverData">[{"0":1,"1":2},["Map"],["Map",3,4,5,6],"getSlugByRecordId|hxDMaj6P5|default|K6uCiHvVB","smartband-band-1870","getSlugByRecordId|hxDMaj6P5|default|olbBzt4rZ","smartband-iot-system"]</script>
   <div id="svg-templates"
     style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict"
     aria-hidden="true">
@@ -7794,10 +7884,11 @@ a { color: #fb460d !important; }
 
 
 
-  <!-- Smooth Scroll (Lenis) & Interactive Navigation -->
+    <!-- Smooth Scroll (Lenis) & Interactive Animation Orchestrator -->
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script>
-    // Initialize Lenis smooth scroll
+  <script id="portfolio-animation-orchestrator">
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Initialize Lenis Smooth Scroll
     if (typeof Lenis !== 'undefined') {
       const lenis = new Lenis({
         duration: 1.2,
@@ -7815,78 +7906,128 @@ a { color: #fb460d !important; }
       requestAnimationFrame(raf);
     }
 
-    // Mobile menu toggle support
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuBtn = document.querySelector('[data-framer-name="Menu Button"], .framer-xqbbew');
-      const menuWrapper = document.querySelector('.framer-1p9ggg6');
-      if (menuBtn && menuWrapper) {
-        menuBtn.addEventListener('click', () => {
-          menuWrapper.classList.toggle('is-open');
+    // 2. Mobile menu toggle support
+    const menuBtn = document.querySelector('[data-framer-name="Menu Button"], .framer-xqbbew');
+    const menuWrapper = document.querySelector('.framer-1p9ggg6');
+    if (menuBtn && menuWrapper) {
+      menuBtn.addEventListener('click', () => {
+        menuWrapper.classList.toggle('is-open');
+      });
+    }
+
+    // 3. About Me Kinetic Word Highlight on Scroll
+    const kineticWords = document.querySelectorAll('.kinetic-word');
+    const aboutSection = document.getElementById('about-us');
+
+    if (kineticWords.length > 0 && aboutSection) {
+      function updateKineticText() {
+        const rect = aboutSection.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const progress = Math.max(0, Math.min(1, (vh * 0.85 - rect.top) / (rect.height * 0.75)));
+        const activeCount = Math.floor(progress * kineticWords.length);
+
+        kineticWords.forEach((word, idx) => {
+          if (idx < activeCount) {
+            word.classList.add('is-lit');
+          } else {
+            word.classList.remove('is-lit');
+          }
         });
       }
-    });
-  </script>
+      window.addEventListener('scroll', updateKineticText, { passive: true });
+      updateKineticText();
+    }
 
+    // 4. Scroll-Triggered Reveal for Section Headers & Cards
+    const headerSelectors = [
+      '#services-home .framer-4lzc07',
+      '#services-home .framer-ar9s84',
+      '#works .framer-tsj3mx',
+      '#works .framer-1aegm1z'
+    ];
 
-  <script id="portfolio-cert-spy">
-    document.addEventListener('DOMContentLoaded', () => {
-      const p1 = document.querySelectorAll('.framer-vi4k4l');
-      const p2 = document.querySelectorAll('.framer-1v25ke1');
-      const p3 = document.querySelectorAll('.framer-u9ztsl');
-      const panels = [p1, p2, p3];
-
-      function showCert(idx) {
-        panels.forEach((pGroup, i) => {
-          pGroup.forEach(el => {
-            if (i === idx) {
-              el.style.opacity = '1';
-              el.style.transform = 'translateY(0)';
-              el.style.pointerEvents = 'auto';
-            } else {
-              el.style.opacity = '0';
-              el.style.transform = 'translateY(18px)';
-              el.style.pointerEvents = 'none';
+    headerSelectors.forEach(sel => {
+      const el = document.querySelector(sel);
+      if (el) {
+        el.classList.add('slide-in-left');
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-visible');
             }
           });
-        });
+        }, { threshold: 0.15 });
+        obs.observe(el);
       }
+    });
 
-      // Checkpoints
-      const cp1 = document.getElementById('certificate-1');
-      const cp2 = document.getElementById('certificate-2');
-      const cp3 = document.getElementById('certificate-3');
+    // 5. Certifications Slider (Scroll Spy + Click Tabs)
+    const p1 = document.querySelectorAll('.framer-vi4k4l');
+    const p2 = document.querySelectorAll('.framer-1v25ke1');
+    const p3 = document.querySelectorAll('.framer-u9ztsl');
+    const panels = [p1, p2, p3];
 
-      if (cp1 && cp2 && cp3) {
-        window.addEventListener('scroll', () => {
-          const vh = window.innerHeight;
-          const r3 = cp3.getBoundingClientRect();
-          const r2 = cp2.getBoundingClientRect();
-          const r1 = cp1.getBoundingClientRect();
-
-          if (r3.top < vh * 0.6) {
-            showCert(2);
-          } else if (r2.top < vh * 0.6) {
-            showCert(1);
+    let currentCert = 0;
+    function showCert(idx) {
+      currentCert = idx;
+      panels.forEach((pGroup, i) => {
+        pGroup.forEach(el => {
+          if (i === idx) {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+            el.style.pointerEvents = 'auto';
           } else {
-            showCert(0);
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(18px)';
+            el.style.pointerEvents = 'none';
           }
-        }, { passive: true });
-      }
-
-      // Clickable progress to switch directly
-      document.querySelectorAll('[data-framer-name="Certification Progress"]').forEach(el => {
-        el.style.cursor = 'pointer';
-        el.addEventListener('click', () => {
-          const text = el.innerText || '';
-          if (text.includes('01')) showCert(1);
-          else if (text.includes('02')) showCert(2);
-          else showCert(0);
         });
       });
-    });
-  </script>
+    }
 
-  <!-- End of bodyEnd -->
+    // Initial cert display
+    showCert(0);
+
+    const cp1 = document.getElementById('certificate-1');
+    const cp2 = document.getElementById('certificate-2');
+    const cp3 = document.getElementById('certificate-3');
+
+    if (cp1 && cp2 && cp3) {
+      window.addEventListener('scroll', () => {
+        const vh = window.innerHeight;
+        const r3 = cp3.getBoundingClientRect();
+        const r2 = cp2.getBoundingClientRect();
+        const r1 = cp1.getBoundingClientRect();
+
+        if (r3.top < vh * 0.55) {
+          if (currentCert !== 2) showCert(2);
+        } else if (r2.top < vh * 0.55) {
+          if (currentCert !== 1) showCert(1);
+        } else {
+          if (currentCert !== 0) showCert(0);
+        }
+      }, { passive: true });
+    }
+
+    // Clickable progress tabs
+    document.querySelectorAll('[data-framer-name="Certification Progress"]').forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => {
+        const text = el.innerText || '';
+        if (text.includes('01')) showCert(1);
+        else if (text.includes('02')) showCert(2);
+        else showCert(0);
+      });
+    });
+
+    // 6. Reveal any static hidden elements in viewport
+    document.querySelectorAll('#services-home [style*="opacity:0"], #services-home [style*="opacity: 0"], #works [style*="opacity:0"], #works [style*="opacity: 0"]').forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  });
+  </script>
+<!-- End of bodyEnd -->
 
 </body>
 
